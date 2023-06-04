@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 *{
     box-sizing: border-box;
@@ -19,7 +19,7 @@ body{
     width: 90vw;
 }
 
-.panel{
+.panel.active{
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,7 +30,11 @@ body{
     flex: 0.5;
     margin: 10px;
     position: relative;
-    transition: flex 0.7s ease-in;
+    transition: flex 0.5s ease-in;
+}
+    
+.panel:hover{
+    ease-in: 200%
 }
 
 .panel h3 {
@@ -44,4 +48,17 @@ body{
 
 .panel.active {
 flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: 0.3s ease-in;
+}
+
+@media{max-width: 480px;} {
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type{}
 }
